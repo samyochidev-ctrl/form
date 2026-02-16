@@ -1,0 +1,68 @@
+<!doctype html>
+            </select>
+          </label>
+        </div>
+
+        <label class="field">
+          <span class="label">สายเวทหลัก (เลือกได้ 1-2) *</span>
+          <div class="chips" id="magicType">
+            <label class="chip"><input type="checkbox" value="ธาตุไฟ" />ธาตุไฟ</label>
+            <label class="chip"><input type="checkbox" value="ธาตุน้ำ" />ธาตุน้ำ</label>
+            <label class="chip"><input type="checkbox" value="ธาตุลม" />ธาตุลม</label>
+            <label class="chip"><input type="checkbox" value="ธาตุดิน" />ธาตุดิน</label>
+            <label class="chip"><input type="checkbox" value="แสง" />แสง</label>
+            <label class="chip"><input type="checkbox" value="ความมืด" />ความมืด</label>
+            <label class="chip"><input type="checkbox" value="ฮีล/สนับสนุน" />ฮีล/สนับสนุน</label>
+            <label class="chip"><input type="checkbox" value="คำสาป" />คำสาป</label>
+            <label class="chip"><input type="checkbox" value="มายา" />มายา</label>
+            <label class="chip"><input type="checkbox" value="เวทโบราณ" />เวทโบราณ</label>
+          </div>
+          <span class="hint">ถ้าเลือกเกิน 2 ระบบจะเตือน</span>
+        </label>
+
+        <div class="sectionTitle">ข้อมูลตัวละคร</div>
+
+        <label class="field">
+          <span class="label">ลักษณะนิสัย/คาแรกเตอร์ *</span>
+          <textarea id="personality" rows="4" placeholder="เขียนสั้น ๆ ให้แอดมินเห็นภาพ" required></textarea>
+        </label>
+
+        <label class="field">
+          <span class="label">ประวัติ/แบ็คสตอรี่ *</span>
+          <textarea id="backstory" rows="6" placeholder="เขียนให้ละเอียดพอสมควร" required></textarea>
+        </label>
+
+        <label class="field">
+          <span class="label">รูปตัวละคร (ลิงก์รูป) *</span>
+          <input id="imageUrl" type="url" placeholder="เช่น https://..." required />
+        </label>
+
+        <div class="sectionTitle">ยืนยัน</div>
+
+        <label class="field">
+          <span class="label">ยืนยันว่าอ่านกฎและยอมรับ *</span>
+          <label class="check">
+            <input id="agree" type="checkbox" required />
+            <span>ฉันยืนยันว่าอ่านกฎแล้ว และจะปฏิบัติตาม</span>
+          </label>
+        </label>
+
+        <div class="submitRow">
+          <button class="btn primary" type="submit" id="submitBtn">ส่งใบสมัคร</button>
+          <div class="small muted" id="submitHint">ข้อมูลจะถูกบันทึกลง Google Sheets</div>
+        </div>
+
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="muted">© Cyntia Magic School • Enrollment</div>
+      <div class="muted">Powered by Google Sheets API (Apps Script)</div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
